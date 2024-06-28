@@ -19,7 +19,6 @@ const CreatePost = () => {
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    console.log('cheguei aqui')
     e.preventDefault()
     setFormError("")
 
