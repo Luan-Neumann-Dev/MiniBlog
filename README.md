@@ -1,67 +1,135 @@
-<h1 align='center'>
- 📝 Miniblog
-</h1>
+# MiniBlog - React & Firebase
 
-![image](https://github.com/user-attachments/assets/8a73f16e-9a0c-4cfb-af26-282628446eda)
-![image](https://github.com/user-attachments/assets/3bf0c547-ff84-4518-9f95-a82925b6aad8)
-![image](https://github.com/user-attachments/assets/f71ded65-f438-4e53-8e2e-3cc32393669f)
+> A full-stack blog application built with React and Firebase, featuring authentication and real-time post management
 
-> The goal of Miniblog is to provide a platform where users can easily create, edit, and delete posts. Authenticated users can publish their content for others to view, encouraging interaction on the platform.
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-Backend-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 
-## 💼 Technologies Used
-- React
-- Firebase (Authentication, Firestore)
-- JavaScript
-- HTML
-- CSS
+![Project Demo](https://github.com/user-attachments/assets/8a73f16e-9a0c-4cfb-af26-282628446eda)
+![Project Demo](https://github.com/user-attachments/assets/3bf0c547-ff84-4518-9f95-a82925b6aad8)
+![Project Demo](https://github.com/user-attachments/assets/f71ded65-f438-4e53-8e2e-3cc32393669f)
 
-## 🏃 How to Run the Project
+## 🎯 About
 
-To run the project locally, follow these instructions:
+MiniBlog is a full-stack web application that allows users to create, edit, and manage blog posts with authentication.
 
-1. **Clone** this repository on Visual Studio Code
-```
-git clone https://github.com/Luan-Neumann-Dev/MiniBlog/
-```
+The project was built using React for the frontend and Firebase for backend services such as authentication and database. It focuses on modern frontend architecture, reusable hooks, and real-time data handling.
 
-2. **Open** the console and navigate to the project folder:
-```
-cd MiniBlog
-```
+## ✨ Key Features
 
-3. **Install** project dependencies via the terminal:
-```
+- 🔐 **Authentication System** - User registration and login using Firebase Auth
+- 📝 **Post Management** - Create, edit, and delete blog posts
+- 📊 **User Dashboard** - Manage your own posts
+- 🔎 **Search Functionality** - Filter posts by keywords
+- ⚡ **Real-time Database** - Data stored and fetched from Firestore
+- 🧩 **Custom Hooks** - Reusable logic for CRUD operations
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React - UI library
+- Vite - Build tool
+- CSS Modules - Scoped styling
+
+**Backend (BaaS):**
+- Firebase Authentication - User management
+- Firestore - NoSQL database
+
+**Architecture:**
+- Context API - Global state management (Auth)
+- Custom Hooks - Data handling abstraction
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/miniblog.git
+
+# Navigate to project
+cd miniblog
+
+# Install dependencies
 npm install
-```
 
-4. **Configure** the firebase database in the ``config.jsx`` file with your firebase environment's credentials.
-
-5. **Start** the server:
-```
+# Run the project
 npm run dev
 ```
 
-6. **Open** your browser and go to `http://localhost:5173` to see the project in action! 🌟
+Access:
+```
+http://localhost:5173
+```
 
-## Contributions 🤝
-Contributions are welcome! If you have suggestions for improvements or encounter any issues, feel free to open an issue or submit a pull request.
+## 📁 Project Structure
 
-<h2> 🙋 Author  </h2>
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Luan-Neumann-Dev">
-        <img src="https://avatars.githubusercontent.com/u/155394874?s=400&u=9694d36eda852061b89679e4da99e37e8c22c7ab&v=4" width="100px;" alt="Foto do Luan no GitHub"/><br>
-        <sub>
-          <b>Luan Neumann Dev</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+```
+src/
+├── components/        # Reusable components (Navbar, Footer, etc.)
+├── pages/             # Application pages
+├── hooks/             # Custom hooks (CRUD operations)
+├── context/           # Auth context
+├── firebase/          # Firebase configuration
+├── assets/            # Static assets
+├── App.jsx            # Main component
+└── main.jsx           # Entry point
+```
+
+## 💡 Technical Highlights
+
+### Custom Hooks for CRUD
+
+The project abstracts Firestore operations into reusable hooks:
+```javascript
+const { insertDocument } = useInsertDocument("posts");
+```
+
+### Authentication with Context API
+
+Global authentication state managed via context:
+- User session control
+- Protected routes behavior
+- Centralized auth logic
+
+## 📚 What I Learned
+
+**Technical Skills:**
+
+- Building SPAs with React and Vite
+- Integrating Firebase (Auth + Firestore)
+- Creating reusable custom hooks
+- Managing global state with Context API
+
+**Best Practices:**
+
+- Separation of concerns
+- Component-based architecture
+- Hook-based logic reuse
+
+## 🗺️ Roadmap
+
+- [ ] Add likes/reactions to posts
+- [ ] Add comments system
+- [ ] Improve UI/UX
+- [ ]Add pagination
+- [ ] Deploy (Firebase Hosting / Vercel)
+
+## 📝 Notes
+- This is a learning project focused on modern React development
+- Uses Firebase as a backend service (BaaS)
+- Easily extendable into a full production blog
+
+## 📄 License
+MIT License
+
+## 👤 Author
+
+**Luan Henrique Neumann**
+
+- LinkedIn: [LuanNeumannDev](https://www.linkedin.com/in/luan-henrique-neumann-dev/)
+- GitHub: [@Luan-Neumann-Dev](https://github.com/Luan-Neumann-Dev)
+- Email: luan.neumann.dev@gmail.com
 
 ---
-<a href="https://www.linkedin.com/in/luan-neumann-dev/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://github.com/Luan-Neumann-Dev" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
-<a href="https://instagram.com/luanneumann" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-<a href = "mailto:luan.neumann.dev@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+
+⭐ Found this helpful? Give it a star!
